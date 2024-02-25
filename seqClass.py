@@ -16,9 +16,9 @@ args = parser.parse_args()
 
 args.seq= args.seq.upper()
 if re.search('^[ACGTU]+$', args.seq):
-    if re.search('T', args.seq) and not re.search('U', args.seq): #Only T is present
+    if re.search('T', args.seq) and not re.search('U', args.seq): #Only T is present (NOT U is present)
         print ('The sequence is DNA')
-    elif re.search('U', args.seq) and not re.search('T', args.seq): #Only U is present
+    elif re.search('U', args.seq) and not re.search('T', args.seq): #Only U is present (NOT T is present)
         print ('The sequence is RNA')
     elif re.search('T', args.seq) and re.search('U', args.seq): # If we type a wrong sequence that includes both T & U
         print ('The sequence cannot contain both T and U')
