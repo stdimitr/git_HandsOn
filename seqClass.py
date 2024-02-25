@@ -22,7 +22,7 @@ if re.search('^[ACGTU]+$', args.seq):
         print ('The sequence is RNA')
     elif re.search('T', args.seq) and re.search('U', args.seq): # If we type a wrong sequence that includes both T & U
         print ('The sequence cannot contain both T and U')
-    else: # If the sequence contains ONLY AG than we cannot decide if it is DNA or RNA sequence
+    else: # If the sequence contains ONLY ACG than we cannot decide if it is DNA or RNA sequence
         print ('The sequence can be DNA or RNA')
 else: # neither DNA or RNA
     print ('The sequence is neither DNA nor RNA')
