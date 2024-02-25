@@ -13,8 +13,9 @@ if len(sys.argv) == 1:
     sys.exit(1)
 
 args = parser.parse_args() 
-
+# Convert the sequence to uppercase in order to make it case insensitive 
 args.seq= args.seq.upper()
+
 if re.search('^[ACGTU]+$', args.seq):
     if re.search('T', args.seq) and not re.search('U', args.seq): #Only T is present (NOT U is present)
         print ('The sequence is DNA')
