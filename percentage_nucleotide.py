@@ -42,8 +42,6 @@ for letter in args.seq:
 	else:
 		counter[letter] = 1
 
-# Print at first place the type of input sequence {either DNA or RNA}
-print('The sequence is DNA' if "T" in args.seq else 'The sequence is RNA' if "U" in args.seq else 'The sequence is DNA or RNA')
 
 # Print the counts of nucleotides
 for letter, counter in counter.items():
