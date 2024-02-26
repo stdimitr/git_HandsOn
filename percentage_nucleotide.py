@@ -47,3 +47,4 @@ for letter in args.seq:
 for letter, counter in counter.items():
 	print(f"%{letter}: {counter / sequence_length * 100:.2f}%")
 
+#Nice code :)
