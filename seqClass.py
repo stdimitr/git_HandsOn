@@ -30,7 +30,7 @@ else: # neither DNA or RNA
 
 if args.motif:
     args.motif = args.motif.upper()
-    print(f'Motif search enabled: looking for motif "{args.motif}" in sequence "{args.seq}"... ', end = '')
+    print(f'Motif search enabled: searching for motif "{args.motif}" within the sequence "{args.seq}"... ', end = '')
     if re.search(args.motif, args.seq):
         print("MOTIF FOUND")
 
