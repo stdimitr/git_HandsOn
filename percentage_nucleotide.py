@@ -1,7 +1,7 @@
 import sys, re
 from argparse import ArgumentParser
 
-# Set up the parser!
+# Define the parser
 parser = ArgumentParser(description=' This module classify a sequence as either DNA or RNA')
 parser.add_argument("-s", "--seq", type=str, required=True, help="Input sequence")
 
@@ -13,7 +13,7 @@ if len(sys.argv) == 1:
 # Set args as the output of the parser script
 args = parser.parse_args()
 
-# Convert the sequence to uppercase in order to make it case insensitive 
+# Convert the input sequence to uppercase in order to make it case insensitive 
 args.seq = args.seq.upper()
 
 if re.search('^[ACGTU]+$', args.seq):
@@ -30,7 +30,7 @@ else: # neither DNA or RNA
     sys.exit(1) 
 
 
-# Set up counter variables
+# Define counter variables
 counter = {}
 
 sequence_length = len(args.seq)
